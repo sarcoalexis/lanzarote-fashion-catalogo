@@ -1,0 +1,173 @@
+[
+  {
+    "id": 100,
+    "author": "user",
+    "payload": {
+      "type": "text",
+      "text": "Actúa como un experto en Flutter UI/UX. Quiero crear una aplicación de e-commerce de calzado llamada \"Lanzarote Fashion\".\n\nRequisitos de Diseño:\n- Estilo: Minimalista, elegante y premium.\n- Paleta de Colores: Basada en el logo adjunto. Usa un Azul Real (#2A5298) como color primario y Dorado (#D4AF37) para acentos (botones e iconos). Fondo blanco o gris muy claro.\n- Tipografía: Una fuente Serif elegante para títulos (como Playfair Display) y Sans-serif limpia para textos (como Lato).\n\nFuncionalidad requerida (Vistas):\n\n1. Pantalla de Splash/Login:\n   - Mostrar el logo 'logo_lanzarote.png' en la parte superior central (tamaño grande).\n   - Campos de texto estilizados para \"Correo Electrónico\" y \"Contraseña\".\n   - Botón principal \"Iniciar Sesión\" (color azul con texto dorado o blanco).\n   - Enlace de texto: \"¿Olvidaste tu contraseña?\" que lleva a la pantalla de recuperación.\n   - En la parte inferior, un enlace o botón discreto: \"¿No tienes cuenta? Regístrate aquí\".\n\n2. Pantalla de Registro:\n   - Campos: Correo, Contraseña, Confirmar Contraseña.\n   - Botón: \"Crear Cuenta\".\n\n3. Pantalla de Recuperación:\n   - Campo: Correo.\n   - Botón: \"Enviar enlace de recuperación\".\n   - Botón para volver al Login.\n\nPor favor, genera el código completo en Flutter (main.dart) utilizando el paquete 'google_fonts' para la tipografía. Usa widgets modulares para mantener el código limpio.",
+      "files": [
+        "{\"name\":\"AI powered chatbot\",\"type\":\"text/plain\",\"size\":198,\"lastModified\":1770850413397,\"data\":\"LS0tCnR5cGU6ICJmZWF0dXJlIgp0aXRsZTogIkFJIHBvd2VyZWQgY2hhdGJvdCIKaWNvbjogInZvaWNlX2NoYXQiCi0tLQoKQWRkIGEgY2hhdCBib3QgdG8gdGhlIGFwcCB0aGF0IGFsbG93cyBhcHAgdXNlcnMgdG8gYXNrIHF1ZXN0aW9ucyBhbmQgcmVjZWl2ZSByZXNwb25zZXMgZnJvbSBHZW1pbmkgdXNpbmcgZ2VtaW5pLTMtcHJvLXByZXZpZXcu\"}"
+      ],
+      "fileUploads": [],
+      "cMarkNode": {}
+    },
+    "createdTimestamp": {
+      "seconds": 1770850413,
+      "nanos": 407000000
+    }
+  },
+  {
+    "id": 101,
+    "author": "model",
+    "payload": {
+      "type": "thinking",
+      "text": "**Defining the Scope**\n\nI'm solidifying the project's parameters. \"Lanzarote Fashion\" will be a React-based e-commerce platform for footwear. The target aesthetic leans towards minimalist, elegant, and premium, with Royal Blue (#2A5298) as a key color. This focuses our design brief in depth.\n\n\n**Refining the Design Elements**\n\nI've nailed down the color palette: Gold (#D4AF37) will complement the existing Royal Blue and white/light gray background. Typography is set; Playfair Display (Serif) for titles, and Lato (Sans-serif) for body text. I am considering these features: Splash/Login, Register, Recovery, and the AI-powered chatbot. I will be implementing React 18+, TypeScript, and Tailwind CSS.\n\n\n**Developing the Core Features**\n\nI'm structuring the codebase now, defining constants for colors and fonts within `constants.ts`. The logo will be a styled `div` or SVG. I'm focusing on user authentication flow: Splash/Login, Register, and Recovery, with a ChatBot as a persistent feature. React 18+, TypeScript, and Tailwind CSS will be used. The AI chatbot uses the `gemini-3-pro-preview` model, with system instructions. I'm importing fonts in `index.html`. Finally, I'll use state to manage the app view in `App.tsx`.\n\n\n",
+      "cMarkNode": {}
+    },
+    "createdTimestamp": {
+      "seconds": 1770850413,
+      "nanos": 407000000
+    },
+    "doneTimestamp": {
+      "seconds": 1770850421,
+      "nanos": 875000000
+    }
+  },
+  {
+    "id": 102,
+    "author": "model",
+    "payload": {
+      "type": "generationTable",
+      "entries": [
+        {
+          "path": "metadata.json",
+          "generationType": 0,
+          "isDone": true,
+          "description": "App metadata and permissions.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\n{\n  \"name\": \"Lanzarote Fashion\",\n  \"description\": \"A premium, minimalist e-commerce footwear application featuring elegant design and AI-powered customer assistance.\",\n  \"requestFramePermissions\": [\"microphone\"]\n}\n"
+            }
+          ]
+        },
+        {
+          "path": "index.html",
+          "generationType": 0,
+          "isDone": true,
+          "description": "Main HTML entry point with fonts and Tailwind CSS.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\n<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Lanzarote Fashion</title>\n    <script src=\"https://cdn.tailwindcss.com\"></script>\n    <link href=\"https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap\" rel=\"stylesheet\">\n    <style>\n        body {\n            font-family: 'Lato', sans-serif;\n            margin: 0;\n            padding: 0;\n        }\n        h1, h2, h3, .serif {\n            font-family: 'Playfair Display', serif;\n        }\n    </style>\n</head>\n<body class=\"bg-[#F8F9FA]\">\n    <div id=\"root\"></div>\n</body>\n</html>\n"
+            }
+          ]
+        },
+        {
+          "path": "index.tsx",
+          "generationType": 0,
+          "isDone": true,
+          "description": "React entry point.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\nimport React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport App from './App';\n\nconst rootElement = document.getElementById('root');\nif (!rootElement) {\n  throw new Error(\"Could not find root element to mount to\");\n}\n\nconst root = ReactDOM.createRoot(rootElement);\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\n"
+            }
+          ]
+        },
+        {
+          "path": "types.ts",
+          "generationType": 0,
+          "isDone": true,
+          "description": "Global types for the application.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\nexport type AuthView = 'login' | 'register' | 'recovery';\n\nexport interface Message {\n  role: 'user' | 'model';\n  text: string;\n}\n"
+            }
+          ]
+        },
+        {
+          "path": "constants.tsx",
+          "generationType": 0,
+          "isDone": true,
+          "description": "Visual constants and colors.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\nimport React from 'react';\n\nexport const COLORS = {\n  primary: '#2A5298', // Royal Blue\n  accent: '#D4AF37',  // Gold\n  background: '#F8F9FA',\n  text: '#1A1A1A',\n};\n\nexport const Logo = ({ size = 120 }: { size?: number }) => (\n  <div \n    className=\"flex flex-col items-center justify-center space-y-2\"\n    style={{ width: size }}\n  >\n    <div \n      className=\"relative flex items-center justify-center rounded-full border-4 p-4\"\n      style={{ borderColor: COLORS.accent, width: size, height: size }}\n    >\n      <span \n        className=\"serif text-4xl font-bold italic\"\n        style={{ color: COLORS.primary }}\n      >\n        LF\n      </span>\n      <div \n        className=\"absolute -bottom-1 h-1 w-12\"\n        style={{ backgroundColor: COLORS.accent }}\n      />\n    </div>\n    <h1 \n      className=\"serif text-center text-xl font-bold tracking-widest uppercase\"\n      style={{ color: COLORS.primary }}\n    >\n      Lanzarote\n    </h1>\n    <p \n      className=\"text-center text-[10px] font-light tracking-[0.3em] uppercase\"\n      style={{ color: COLORS.accent }}\n    >\n      Fashion\n    </p>\n  </div>\n);\n"
+            }
+          ]
+        },
+        {
+          "path": "services/geminiService.ts",
+          "generationType": 0,
+          "isDone": true,
+          "description": "Service for interacting with Gemini API.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\nimport { GoogleGenAI } from \"@google/genai\";\n\nconst SYSTEM_INSTRUCTION = `\nEres el asistente virtual experto de \"Lanzarote Fashion\", una boutique de calzado premium y minimalista.\nTu estilo debe ser elegante, servicial y profesional.\nInformación de la marca:\n- Ubicación: Inspirada en la elegancia de Lanzarote.\n- Productos: Zapatos de alta gama, artesanales y de diseño minimalista.\n- Colores: Azul Real y Dorado.\n- Ofrecemos envío gratuito en pedidos superiores a 150€.\n- Política de devolución: 30 días.\nResponde siempre en español de forma cortés.\n`;\n\nexport async function getChatResponse(message: string, history: { role: 'user' | 'model', parts: { text: string }[] }[]) {\n  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });\n  \n  try {\n    const chat = ai.chats.create({\n      model: 'gemini-3-pro-preview',\n      config: {\n        systemInstruction: SYSTEM_INSTRUCTION,\n      },\n      history: history,\n    });\n\n    const result = await chat.sendMessage({ message });\n    return result.text;\n  } catch (error) {\n    console.error(\"Gemini Error:\", error);\n    return \"Lo siento, estoy teniendo dificultades técnicas. Por favor, inténtalo de nuevo más tarde.\";\n  }\n}\n"
+            }
+          ]
+        },
+        {
+          "path": "components/Input.tsx",
+          "generationType": 0,
+          "isDone": true,
+          "description": "Styled input component.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\nimport React from 'react';\nimport { COLORS } from '../constants';\n\ninterface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {\n  label: string;\n}\n\nconst Input: React.FC<InputProps> = ({ label, ...props }) => {\n  return (\n    <div className=\"flex flex-col space-y-1 w-full group\">\n      <label className=\"text-xs font-semibold uppercase tracking-wider text-slate-500 group-focus-within:text-[#2A5298] transition-colors\">\n        {label}\n      </label>\n      <input\n        {...props}\n        className=\"w-full border-b-2 border-slate-200 bg-transparent py-2 px-0 text-slate-800 transition-all focus:border-[#2A5298] focus:outline-none\"\n      />\n    </div>\n  );\n};\n\nexport default Input;\n"
+            }
+          ]
+        },
+        {
+          "path": "components/Button.tsx",
+          "generationType": 0,
+          "isDone": true,
+          "description": "Styled button component.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\nimport React from 'react';\nimport { COLORS } from '../constants';\n\ninterface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  variant?: 'primary' | 'secondary' | 'ghost';\n  fullWidth?: boolean;\n}\n\nconst Button: React.FC<ButtonProps> = ({ \n  children, \n  variant = 'primary', \n  fullWidth = false, \n  className = '', \n  ...props \n}) => {\n  const baseStyles = \"px-8 py-3 rounded-full font-bold uppercase tracking-widest text-sm transition-all active:scale-95 shadow-lg hover:shadow-xl\";\n  \n  const variants = {\n    primary: \"bg-[#2A5298] text-white hover:bg-[#1e3c72]\",\n    secondary: \"bg-[#D4AF37] text-white hover:bg-[#b8962c]\",\n    ghost: \"bg-transparent text-[#2A5298] shadow-none hover:shadow-none font-semibold\"\n  };\n\n  return (\n    <button\n      {...props}\n      className={`${baseStyles} ${variants[variant]} ${fullWidth ? 'w-full' : ''} ${className}`}\n    >\n      {children}\n    </button>\n  );\n};\n\nexport default Button;\n"
+            }
+          ]
+        },
+        {
+          "path": "components/ChatBot.tsx",
+          "generationType": 0,
+          "isDone": true,
+          "description": "AI Chatbot interface.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\nimport React, { useState, useRef, useEffect } from 'react';\nimport { MessageCircle, X, Send, Bot } from 'lucide-react';\nimport { getChatResponse } from '../services/geminiService';\nimport { Message } from '../types';\n\nconst ChatBot: React.FC = () => {\n  const [isOpen, setIsOpen] = useState(false);\n  const [messages, setMessages] = useState<Message[]>([\n    { role: 'model', text: '¡Hola! Soy el asistente de Lanzarote Fashion. ¿En qué puedo ayudarte hoy?' }\n  ]);\n  const [input, setInput] = useState('');\n  const [isLoading, setIsLoading] = useState(false);\n  const scrollRef = useRef<HTMLDivElement>(null);\n\n  useEffect(() => {\n    if (scrollRef.current) {\n      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;\n    }\n  }, [messages]);\n\n  const handleSend = async () => {\n    if (!input.trim() || isLoading) return;\n\n    const userMsg = input.trim();\n    setInput('');\n    setMessages(prev => [...prev, { role: 'user', text: userMsg }]);\n    setIsLoading(true);\n\n    // Format history for Gemini\n    const history = messages.map(m => ({\n      role: m.role,\n      parts: [{ text: m.text }]\n    }));\n\n    const response = await getChatResponse(userMsg, history);\n    setMessages(prev => [...prev, { role: 'model', text: response || '' }]);\n    setIsLoading(false);\n  };\n\n  return (\n    <div className=\"fixed bottom-6 right-6 z-50\">\n      {/* Floating Button */}\n      {!isOpen && (\n        <button\n          onClick={() => setIsOpen(true)}\n          className=\"flex h-14 w-14 items-center justify-center rounded-full bg-[#2A5298] text-white shadow-2xl transition-transform hover:scale-110 active:scale-90\"\n        >\n          <MessageCircle size={28} />\n        </button>\n      )}\n\n      {/* Chat Window */}\n      {isOpen && (\n        <div className=\"flex h-[500px] w-[350px] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl animate-in slide-in-from-bottom-5 duration-300\">\n          {/* Header */}\n          <div className=\"flex items-center justify-between bg-[#2A5298] p-4 text-white\">\n            <div className=\"flex items-center space-x-2\">\n              <Bot size={20} className=\"text-[#D4AF37]\" />\n              <span className=\"font-bold tracking-wider\">Asistente LF</span>\n            </div>\n            <button onClick={() => setIsOpen(false)} className=\"hover:text-slate-300\">\n              <X size={20} />\n            </button>\n          </div>\n\n          {/* Messages */}\n          <div ref={scrollRef} className=\"flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50\">\n            {messages.map((m, i) => (\n              <div\n                key={i}\n                className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}\n              >\n                <div\n                  className={`max-w-[80%] rounded-2xl p-3 text-sm shadow-sm ${\n                    m.role === 'user'\n                      ? 'bg-[#2A5298] text-white rounded-tr-none'\n                      : 'bg-white text-slate-800 rounded-tl-none border border-slate-100'\n                  }`}\n                >\n                  {m.text}\n                </div>\n              </div>\n            ))}\n            {isLoading && (\n              <div className=\"flex justify-start\">\n                <div className=\"animate-pulse bg-slate-200 text-slate-400 p-2 rounded-full text-xs\">\n                  Escribiendo...\n                </div>\n              </div>\n            )}\n          </div>\n\n          {/* Input */}\n          <div className=\"border-t p-4 flex space-x-2 bg-white\">\n            <input\n              type=\"text\"\n              value={input}\n              onChange={(e) => setInput(e.target.value)}\n              onKeyDown={(e) => e.key === 'Enter' && handleSend()}\n              placeholder=\"Escribe tu mensaje...\"\n              className=\"flex-1 text-sm outline-none focus:ring-0\"\n            />\n            <button\n              onClick={handleSend}\n              disabled={isLoading || !input.trim()}\n              className=\"text-[#D4AF37] hover:scale-110 disabled:opacity-50\"\n            >\n              <Send size={20} />\n            </button>\n          </div>\n        </div>\n      )}\n    </div>\n  );\n};\n\nexport default ChatBot;\n"
+            }
+          ]
+        },
+        {
+          "path": "App.tsx",
+          "generationType": 0,
+          "isDone": true,
+          "description": "Main application logic and routing.",
+          "diffs": [
+            {
+              "target": "",
+              "replacement": "\nimport React, { useState } from 'react';\nimport { AuthView } from './types';\nimport { Logo, COLORS } from './constants';\nimport Input from './components/Input';\nimport Button from './components/Button';\nimport ChatBot from './components/ChatBot';\n\nconst App: React.FC = () => {\n  const [view, setView] = useState<AuthView>('login');\n\n  const renderLogin = () => (\n    <div className=\"w-full max-w-sm space-y-8 animate-in fade-in duration-700\">\n      <div className=\"flex justify-center mb-12\">\n        <Logo size={140} />\n      </div>\n      \n      <div className=\"space-y-6\">\n        <Input \n          label=\"Correo Electrónico\" \n          type=\"email\" \n          placeholder=\"ejemplo@lanzarote.com\" \n        />\n        <Input \n          label=\"Contraseña\" \n          type=\"password\" \n          placeholder=\"••••••••\" \n        />\n      </div>\n\n      <div className=\"space-y-4\">\n        <Button fullWidth onClick={() => alert('Sesión Iniciada')}>\n          Iniciar Sesión\n        </Button>\n        <div className=\"text-center\">\n          <button \n            onClick={() => setView('recovery')}\n            className=\"text-xs font-semibold text-[#D4AF37] uppercase tracking-widest hover:underline\"\n          >\n            ¿Olvidaste tu contraseña?\n          </button>\n        </div>\n      </div>\n\n      <div className=\"pt-8 text-center\">\n        <p className=\"text-xs text-slate-400 uppercase tracking-widest\">\n          ¿No tienes cuenta?{' '}\n          <button \n            onClick={() => setView('register')}\n            className=\"text-[#2A5298] font-bold hover:underline\"\n          >\n            Regístrate aquí\n          </button>\n        </p>\n      </div>\n    </div>\n  );\n\n  const renderRegister = () => (\n    <div className=\"w-full max-w-sm space-y-8 animate-in slide-in-from-right-10 duration-500\">\n      <div className=\"text-center\">\n        <h2 className=\"serif text-3xl font-bold text-[#2A5298]\">Crear Cuenta</h2>\n        <p className=\"text-xs text-slate-400 mt-2 uppercase tracking-widest\">Únete a la exclusividad</p>\n      </div>\n\n      <div className=\"space-y-6\">\n        <Input label=\"Correo Electrónico\" type=\"email\" placeholder=\"tu@email.com\" />\n        <Input label=\"Contraseña\" type=\"password\" placeholder=\"••••••••\" />\n        <Input label=\"Confirmar Contraseña\" type=\"password\" placeholder=\"••••••••\" />\n      </div>\n\n      <Button fullWidth variant=\"secondary\" onClick={() => setView('login')}>\n        Crear Cuenta\n      </Button>\n\n      <div className=\"text-center\">\n        <button \n          onClick={() => setView('login')}\n          className=\"text-xs text-[#2A5298] font-bold uppercase tracking-widest hover:underline\"\n        >\n          Volver al Inicio\n        </button>\n      </div>\n    </div>\n  );\n\n  const renderRecovery = () => (\n    <div className=\"w-full max-w-sm space-y-8 animate-in slide-in-from-left-10 duration-500\">\n      <div className=\"text-center\">\n        <h2 className=\"serif text-3xl font-bold text-[#2A5298]\">Recuperación</h2>\n        <p className=\"text-xs text-slate-400 mt-2 uppercase tracking-widest\">Enviaremos un enlace a tu correo</p>\n      </div>\n\n      <div className=\"space-y-6\">\n        <Input label=\"Correo Electrónico\" type=\"email\" placeholder=\"tu@email.com\" />\n      </div>\n\n      <Button fullWidth onClick={() => alert('Enlace enviado')}>\n        Enviar Enlace\n      </Button>\n\n      <div className=\"text-center\">\n        <button \n          onClick={() => setView('login')}\n          className=\"text-xs text-[#2A5298] font-bold uppercase tracking-widest hover:underline\"\n        >\n          Volver al Login\n        </button>\n      </div>\n    </div>\n  );\n\n  return (\n    <div className=\"min-h-screen flex items-center justify-center p-6 bg-slate-50 relative overflow-hidden\">\n      {/* Decorative background elements */}\n      <div className=\"absolute top-0 right-0 w-64 h-64 bg-[#2A5298] opacity-[0.03] rounded-full -mr-32 -mt-32\" />\n      <div className=\"absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37] opacity-[0.03] rounded-full -ml-48 -mb-48\" />\n\n      {/* Main Content Card */}\n      <main className=\"bg-white p-8 md:p-12 rounded-[40px] shadow-2xl w-full max-w-md border border-slate-100 relative z-10 flex flex-col items-center\">\n        {view === 'login' && renderLogin()}\n        {view === 'register' && renderRegister()}\n        {view === 'recovery' && renderRecovery()}\n      </main>\n\n      {/* AI Chatbot */}\n      <ChatBot />\n\n      {/* Footer Credit */}\n      <footer className=\"absolute bottom-4 left-0 right-0 text-center pointer-events-none\">\n        <p className=\"text-[10px] text-slate-300 uppercase tracking-[0.4em]\">\n          Lanzarote Fashion &copy; 2024\n        </p>\n      </footer>\n    </div>\n  );\n};\n\nexport default App;\n"
+            }
+          ]
+        }
+      ]
+    },
+    "createdTimestamp": {
+      "seconds": 1770850421,
+      "nanos": 876000000
+    },
+    "doneTimestamp": {
+      "seconds": 1770850422,
+      "nanos": 451000000
+    }
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "name": "Lanzarote Fashion",
+  "description": "A premium, minimalist e-commerce footwear application featuring elegant design and AI-powered customer assistance.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
